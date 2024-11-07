@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=title%></title>
+  </head>
+  <body>
+    <div class="list-container">
+      <%for (const film of films){%>
+      <div>
+        <span><%=film.title%></span>
+        <span><%=film.description%></span>
+
+        <span><%=film.genre.map({title}=>title).join(", ")%></span>
+      </div>
+      <%}%>
+    </div>
+  </body>
+</html>
